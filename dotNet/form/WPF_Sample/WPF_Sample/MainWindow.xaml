@@ -4,6 +4,6 @@
         Title="MainWindow" Height="350" Width="525"
         Icon="icon.png">
     <Grid>
-        
+        <Button Content="Button At Main Window" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="159" Margin="0,0,0,269" Click="Button_Click" Height="50"/>
     </Grid>
 </Window>
