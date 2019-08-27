@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue Test Demo</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+    </div>
+
+    <div id="timeDiv" v-bind:title="nowTime">
+        {{content}}
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            }
+        })
+
+        let timeData = {
+            content: '現在時間',
+            nowTime: '目前是' + String(new Date()),
+        }
+        
+        let timeDiv = new Vue({
+            el: '#timeDiv',
+            data: timeData,
+        })
+    </script>
+</body>
+
+</html>
