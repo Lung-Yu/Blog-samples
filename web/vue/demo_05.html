@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue Test Demo</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="n in 10">
+                {{ n }}
+            </li>
+        </ul>
+    </div>
+    <div id="app_2">
+        <ul>
+            <li v-for="value in object">
+                {{ value }}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#app'
+        })
+
+        new Vue({
+            el: '#app_2',
+            data: {
+                object: {
+                    name: 'demo for loop',
+                    url: 'http://example.com',
+                    slogan: 'dream.'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
